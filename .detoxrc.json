@@ -3,12 +3,23 @@
   "runnerConfig": "e2e/config.json",
   "skipLegacyWorkersInjection": true,
   "apps": {
+    "android": {
+      "type": "android.apk",
+      "binaryPath": "e2e/bin/Exponent.apk",
+      "testBinaryPath": "e2e/bin/Exponent.apk"
+    },
     "ios": {
       "type": "ios.app",
-      "binaryPath": "bin/Exponent.app"
+      "binaryPath": "e2e/bin/Exponent.app"
     }
   },
   "devices": {
+    "emulator": {
+      "type": "android.emulator",
+      "device": {
+        "avdName": "Pixel_4_XL_API_22"
+      }
+    },
     "simulator": {
       "type": "ios.simulator",
       "device": {
@@ -17,9 +28,13 @@
     }
   },
   "configurations": {
+    "android": {
+      "app": "android",
+      "device": "emulator"
+    },
     "ios": {
-      "device": "simulator",
-      "app": "ios"
+      "app": "ios",
+      "device": "simulator"
     }
   }
 }

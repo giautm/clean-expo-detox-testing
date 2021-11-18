@@ -1,5 +1,6 @@
 {
   "expo": {
+    "owner": "giautm",
     "name": "clean-detox-testing",
     "slug": "clean-detox-testing",
     "version": "1.0.0",

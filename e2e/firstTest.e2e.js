@@ -1,10 +1,11 @@
 const { reloadApp } = require("detox-expo-helpers");
 
-describe("Example", () => {
+describe('Example', () => {
+
   beforeAll(async () => {
     await reloadApp();
-    // sleep so app can boot
-    await sleep(4000);
+    const welcomeMessage = element(by.id('fabian'));
+    await waitFor(welcomeMessage).toBeVisible().withTimeout(20000);
   });
 
   beforeEach(async () => {});
@@ -20,7 +21,3 @@ describe("Example", () => {
     await device.takeScreenshot("welcome screen after");
   });
 });
-
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}

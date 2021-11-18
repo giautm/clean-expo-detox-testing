@@ -9,7 +9,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "detox": "^18.19.0",
+    "detox": "19.0.0",
     "detox-expo-helpers": "github:fschoenfeldt/detox-expo-helpers#0.7.1",
     "expo": "~42.0.1",
     "expo-detox-hook": "^1.0.10",
@@ -21,6 +21,9 @@
     "react-native-testing-library": "^6.0.0",
     "react-native-web": "~0.13.12",
     "react-test-renderer": "^17.0.2"
+  },
+  "resolutions": {
+    "xdl": "59.2.13"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0"
